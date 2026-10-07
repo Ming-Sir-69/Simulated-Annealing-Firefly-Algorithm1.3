@@ -1,5 +1,25 @@
 # Research on Government Subsidies and Hydrogen Energy Supply Chain Based on Simulated Annealing Firefly Algorithm
 
+## 中文阅读入口
+
+氢能供应链与政府补贴研究代码：使用模拟退火与萤火虫算法，按无补贴对照、成本与运输、成本分担、环境与补贴等不同模型保存实验实现。适合研究供应链优化、启发式算法和 MATLAB / Python 联合实验的读者。
+
+1. 先读下方保留的英文研究背景和版本变化。
+2. 查看 [model0](model0/)、[model1](model1/)、[model2](model2/) 与 [model3](model3/)，从每个目录的 `initialize_parameters.py`、适应度函数和 MATLAB 入口了解模型假设。
+3. 对照 [文件夹结构.txt](文件夹结构.txt) 和实际目录。`实验数据.zip` 是单独的归档，尚未在此说明中展开核验。
+
+### 运行前需要确认
+
+现有 MATLAB 脚本通过 `py.*` 调用同目录 Python 模块；已核对的修改版入口写有特定 Windows Python 安装路径。仓库没有 `requirements.txt`，因此原先的 `pip install -r requirements.txt` 不能直接照用。Python 代码至少导入 NumPy，完整依赖、MATLAB / Python 兼容版本、模块搜索路径和输出位置仍需确认。这里提供阅读入口，不承诺在新的机器上可直接复现。
+
+算法效果、最优解和补贴结论应结合模型假设与独立复现实验判断。下面的 Results 与版本更新保留原研究叙述，未在本次文档整理中复跑或验证。
+
+### 贡献与许可
+
+欢迎在 [Issues](https://github.com/Ming-Sir-69/Simulated-Annealing-Firefly-Algorithm1.3/issues) 讨论依赖清单、可复现的小例子和模型假设，或提交文档 Pull Request。请注明模型目录、入口、版本与预期行为，不把原始实验或未获授权的数据直接提交到公开仓库。
+
+仓库维护：[Ming-Sir-69](https://github.com/Ming-Sir-69)。当前未发现 LICENSE/NOTICE；资料来源和复用授权待确认，不在这里新增许可或版权归属声明。
+
 ## Introduction
 
 This repository contains the research and implementation of a study on government subsidies and the hydrogen energy supply chain, utilizing the Simulated Annealing Firefly Algorithm. The project aims to optimize the hydrogen energy supply chain by considering various factors such as production costs, transportation costs, environmental costs, and government subsidies.
@@ -126,26 +146,9 @@ The project is organized into the following directories and files:
 - **文件夹结构.txt**: Description of the directory structure.
 - **README.md**: Introduction and overview of the project.
 
-## How to Run
+## Reproduction status / 复现状态
 
-1. **Download the repository as a ZIP file**:
-    - Click the "Code" button on the repository page and select "Download ZIP".
-
-2. **Extract the ZIP file**:
-    - Extract the contents to a desired location on your computer.
-
-3. **Set up the Python environment**:
-    Ensure you have Python installed. Create a virtual environment and install the required packages.
-    ```bash
-    python -m venv env
-    source env/bin/activate  # On Windows use `env\Scripts\activate`
-    pip install -r requirements.txt  # Ensure you have a requirements.txt file with necessary packages
-    ```
-
-4. **Run the MATLAB scripts**:
-    - Open MATLAB 2023b (or your installed version).
-    - Navigate to the directory containing the extracted files.
-    - Run the scripts `matlab_script_model1.m`, `matlab_script_model2.m`, and `matlab_script_model3.m` one by one.
+The original project uses MATLAB scripts with Python modules. Begin with the actual `model0/`–`model3/` directories. The checked modified MATLAB scripts set a machine-specific Python path, and the repository does not include `requirements.txt`. Configure the MATLAB/Python bridge and confirm dependencies before attempting reproduction; no turnkey setup is claimed here.
 
 ## Results
 
@@ -165,7 +168,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Contact
 
-If you have any questions or suggestions, please feel free to contact me at [1254406948@qq.com](mailto:1254406948@qq.com).
+For questions and suggestions, use this repository’s GitHub Issues or Pull Requests. Repository maintenance: [Ming-Sir-69](https://github.com/Ming-Sir-69).
 
 
 ### Update Version 1.1
